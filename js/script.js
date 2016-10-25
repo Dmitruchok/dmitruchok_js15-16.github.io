@@ -21,12 +21,11 @@ $form.click(function () {
 });
 
 $.ajax({
-  url:
-  'http://ajax.googleapis.com/ajax/services/search/web?v=1.0?key=your-key&q=PHP&callback=GoogleCallback&context=?',
+  url: 'http://ajax.googleapis.com/ajax/services/search/web?v=1.0?key=your-key&q=PHP&callback=GoogleCallback&context=?',
 
-  /*data: (
+  data: {
     abc: 123 //отправка на сервер
-  ),*/
+  },
 
   mathod: 'POST',//Отправить Get чтобы получить данные
 
