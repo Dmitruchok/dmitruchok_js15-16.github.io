@@ -73,8 +73,10 @@ function Student() {
 
 Student.prototype = new Human();
 var newStudent = new Student(),
-studentLast = new Student();
+studentLast = new Student(),
+studentScholarship = new Student();
 
 console.log(newStudent.height);
 console.log(studentLast.name);
+console.log(studentScholarship.scholarship);
 });
