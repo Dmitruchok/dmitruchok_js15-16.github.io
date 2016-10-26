@@ -12,8 +12,6 @@ var $findInform = $('form .enter_text');
   $findInform.addClass('on_outline');
   $( '#overlay' ).css( 'display', 'block' );
   $( 'input' ).css( 'z-index', '5' );
-  $( '#find' ).css( 'z-index', '5' );
-
 });
 
 $( '#overlay' ).click(function () {
