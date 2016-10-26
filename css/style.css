@@ -23,7 +23,7 @@ img {
   width: 45%;
   height: 35px;
   margin: 0 auto;
-  border: 1px solid #7171fd;;
+  border: 1px solid #2a7fc1;
 }
 
 input {
@@ -60,6 +60,5 @@ input[type="button"]:hover {
   height: 100%;
   top: 0;
   left: 0;
-  cursor: pointer;
   display: none;
 }
