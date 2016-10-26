@@ -12,12 +12,13 @@ var $borderLight = false;
  $findInform.click(function () {
      $findInform.removeClass('enter_text');
      $findInform.addClass('on_outline');
-
+     $('#overlay').css( 'display', 'block' );
 });
 
-$form.click(function () {
+$('#overlay').click(function () {
  $findInform.removeClass('on_outline');
  $findInform.addClass('enter_text');
+ $('#overlay').css( 'display', 'none' );
 });
 
 $.ajax({
