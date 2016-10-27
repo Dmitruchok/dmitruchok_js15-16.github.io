@@ -10,8 +10,14 @@ var $findInform = $('form .enter_text');
  $findInform.click(function () {
   $findInform.removeClass('enter_text');
   $findInform.addClass('on_outline');
-  $( '#overlay' ).css( 'display', 'block' );
-  $( 'input' ).css( 'z-index', '5' );
+  $( '#overlay' ).css( {
+    display: 'block' ,
+    'z-index': 2,
+  });
+  $( 'input' ).css( {
+    position: 'relative',
+    'z-index': 5
+  });
 });
 
 $( '#overlay' ).click(function () {
