@@ -27,11 +27,11 @@ $( '#overlay' ).click(function () {
 });
 
 $.ajax({
-  url: 'http://ajax.googleapis.com/ajax/services/search/web?v=1.0&ABQIAAAACKQaiZJrS0bhr9YARgDqUxQBCBLUIYB7IF2WaNrkYqF0tBovNBQFDtM_KNtb3xQxWff2mI5hipc3lg=large&q=&callback=GoogleCallback&context=?',
+  url: 'http://api.flickr.com/services/feeds/photos_public.gne',
 
-  data: {
+  /*data: {
     abc: 123 //отправка на сервер
-  },
+  },*/
 
   mathod: 'POST',//Отправить Get чтобы получить данные
 
@@ -43,6 +43,8 @@ $.ajax({
   error: function () {
 
   }
+}).done(function ( data ) {
+  console.log( data );
 });
 
 function Human() {
