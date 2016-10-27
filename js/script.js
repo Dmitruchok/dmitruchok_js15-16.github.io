@@ -27,7 +27,7 @@ $( '#overlay' ).click(function () {
 });
 
 $.ajax({
-  url: 'http://ajax.googleapis.com/ajax/services/search/web?v=1.0&key=ABQIAAAACKQaiZJrS0bhr9YARgDqUxQBCBLUIYB7IF2WaNrkYqF0tBovNBQFDtM_KNtb3xQxWff2mI5hipc3lg=large&q=&callback=GoogleCallback&context=?',
+  url: 'http://ajax.googleapis.com/ajax/services/search/web?v=1.0&ABQIAAAACKQaiZJrS0bhr9YARgDqUxQBCBLUIYB7IF2WaNrkYqF0tBovNBQFDtM_KNtb3xQxWff2mI5hipc3lg=large&q=&callback=GoogleCallback&context=?',
 
   data: {
     abc: 123 //отправка на сервер
@@ -56,7 +56,7 @@ function Human() {
 function Worker() {
   this.placeWork = 'Radischeva 10/14';
   this.salary = '1300$';
-  this.work = function () {
+  this.work = function Say() {
     console.log('Работать');
   }
 }
