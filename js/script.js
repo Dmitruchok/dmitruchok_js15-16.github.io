@@ -23,7 +23,7 @@ $( '#overlay' ).click(function () {
 });
 
 $.ajax({
-  url: 'https://pixabay.com/api/?key=3630931-670473688b01fdf5a6341f310&q=yellow+flowers&image_type=photo',
+  url: 'https://pixabay.com/api/?key=3630931-670473688b01fdf5a6341f310&q=yellow+flowers&image_type=photo&cat=&min_width=&min_height=&q=sports&order=popular',
 
   data: {
     abc: 123 //отправка на сервер
