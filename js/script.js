@@ -39,10 +39,11 @@ $.ajax({
   dataType: 'jsonp',
 
   success: function (data) {
+    console.log('hi');
   },
 
   error: function () {
-
+    console.log('by');
   }
 });
 
