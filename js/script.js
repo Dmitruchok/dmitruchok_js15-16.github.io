@@ -1,8 +1,4 @@
 
-function GoogleCallback( jqueryObj, data ) {
-  console.log( data );
-}
-
 $(function() {
 
 var $findInform = $('form .enter_text');
@@ -27,7 +23,6 @@ $( '#overlay' ).click(function () {
 });
 
 $.ajax({
-  //url: 'https://pixabay.com/api/?v=1.0?key=your-key&q=ni&callback=GoogleCallback&context=?',
   url: 'https://pixabay.com/api/?key=3630931-670473688b01fdf5a6341f310&q=yellow+flowers&image_type=photo',
 
   data: {
@@ -45,6 +40,8 @@ $.ajax({
   error: function () {
     console.log('by');
   }
+}).done(function GoogleCallback( data ) {
+  console.log( data );
 });
 
 function Human() {
