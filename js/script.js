@@ -80,9 +80,11 @@ function Student() {
 Student.prototype = new Human();
 var newStudent = new Student(),
 studentLast = new Student(),
-studentScholarship = new Student();
+studentScholarship = new Student(),
+studentSay = new Student();
 
 console.log( 'newStudent.height - ', newStudent.height );
 console.log( 'studentLast.name - ', studentLast.name );
 console.log( 'studentScholarship.scholarship  - ', studentScholarship.scholarship );
+studentSay.see();
 });
