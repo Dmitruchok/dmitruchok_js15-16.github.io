@@ -23,7 +23,7 @@ $( '#overlay' ).click(function () {
 });
 
 
-$( '#find' ).click(function () {
+$( '#find' ).click(function s() {
   var $inputText = $( '#txt' ).val();
   $.ajax({
     url: 'https://pixabay.com/api/?key=3630931-670473688b01fdf5a6341f310&q=yellow+flowers&image_type=photo&cat=&min_width=&min_height=&q='+$inputText+'&order=popular',
@@ -40,7 +40,7 @@ $( '#find' ).click(function () {
       $( '<img/>' ).attr( 'src', hits.previewURL ).appendTo( '.wrapper' );
     })
   });
-});
+}).s();
 
 function Human() {
   this.name = 'Andrei';
