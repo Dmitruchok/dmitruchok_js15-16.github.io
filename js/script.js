@@ -27,11 +27,11 @@ $( '#overlay' ).click(function () {
 });
 
 $.ajax({
-  //url: 'https://www.google.com.ua/webhp?v=1.0?key=your-key&q=PHP&callback=GoogleCallback&context=?',
+  url: 'https://pixabay.com/en/photos/?v=1.0?key=your-key&q=nike&callback=GoogleCallback&context=?',
 
-  /*data: {
+  data: {
     abc: 123 //отправка на сервер
-  },*/
+  },
 
   mathod: 'POST',//Отправить Get чтобы получить данные
 
