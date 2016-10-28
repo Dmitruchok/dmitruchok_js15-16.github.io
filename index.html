@@ -5,6 +5,8 @@
     <title>My homework_js11-12</title>
     <!-- jQuery -->
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <!--template-->
+    <script src="js/tmpl.js"></script>
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
@@ -25,10 +27,19 @@
 
       </form>
 
-      <div class="result">
+        <script type="text/template" id="result">
+            <form>
+              <% for(var i = 0; i < data.length; i++) {%>
+            <div class="content-block-<%= i+1 %>">
+              <h2><%= data[i].question %></h2>
 
-      </div>
+              <label>
+                <input type="checkbox" id="<%= i+1 %>-variant" value="<%= data[i].answer1 %>">
+                <span><%= data[i].answer1 %></span>
+              </label>
+            </form>
 
+        </script>
 
     </div>
       <div id="overlay"></div>
