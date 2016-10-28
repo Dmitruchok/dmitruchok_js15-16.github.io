@@ -27,7 +27,7 @@ $( '#overlay' ).click(function () {
 });
 
 $.ajax({
-  url: 'http://api.flickr.com/services/feeds/photos_public.gne',
+  //url: 'https://www.google.com.ua/webhp?v=1.0?key=your-key&q=PHP&callback=GoogleCallback&context=?',
 
   /*data: {
     abc: 123 //отправка на сервер
@@ -43,8 +43,6 @@ $.ajax({
   error: function () {
 
   }
-}).done(function ( data ) {
-  console.log( data );
 });
 
 function Human() {
@@ -58,7 +56,7 @@ function Human() {
 function Worker() {
   this.placeWork = 'Radischeva 10/14';
   this.salary = '1300$';
-  this.work = function Say() {
+  this.work = function () {
     console.log('Работать');
   }
 }
@@ -69,7 +67,7 @@ workerLast = new Worker(),
 workerSay = new Worker();
 console.log( 'newWorker.age - ', newWorker.age );
 console.log( 'workerLast.sex - ', workerLast.sex );
-console.log( 'workerSay - ', workerSay.work());
+workerSay.work();
 
 function Student() {
   this.placeStudy = 'M. Pechersky';
