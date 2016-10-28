@@ -23,30 +23,22 @@ $( '#overlay' ).click(function () {
 });
 
 
-$('#find').click(function () {
-  var $inputText = $('#txt').val();
+$( '#find' ).click(function () {
+  var $inputText = $( '#txt' ).val();
   $.ajax({
-    url: 'https://pixabay.com/api/?key=3630931-670473688b01fdf5a6341f310&q=yellow+flowers&image_type=photo&cat=&min_width=&min_height=&q=sports&order=popular',
-
+    url: 'https://pixabay.com/api/?key=3630931-670473688b01fdf5a6341f310&q=yellow+flowers&image_type=photo&cat=&min_width=&min_height=&q='+$inputText+'&order=popular',
     mathod: 'POST',//Отправить Get чтобы получить данные
-
     dataType: 'jsonp',
-
     success: function (data) {
-      console.log('hi');
+      console.log('Load information');
     },
-
     error: function () {
-      console.log('by');
+      console.log('Appired problem!!');
     }
   }).done(function Callback( data ) {
-    console.log(data);
-    $.each(data.hits, function ( i, hits ) {
-      $('<img/>').attr('src', hits.previewURL).appendTo('.wrapper');
+    $.each( data.hits, function ( i, hits ) {
+      $( '<img/>' ).attr( 'src', hits.previewURL ).appendTo( '.wrapper' );
     })
-    console.log( data.hits );
-    /*$('body').append(data.hits[0].previewURL)
-    console.log( data.hits[0] );*/
   });
 });
 

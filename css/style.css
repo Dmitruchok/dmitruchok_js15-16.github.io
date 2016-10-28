@@ -2,7 +2,7 @@ form {
   width: 100%;
 }
 
-img {
+.img-form {
   display: block;
   margin: 130px auto 0;
   width: 300px;
@@ -61,4 +61,10 @@ input[type="button"]:hover {
   top: 0;
   left: 0;
   display: none;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
 }

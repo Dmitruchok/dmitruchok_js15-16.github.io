@@ -16,7 +16,7 @@
     <div class="wrapper">
 
       <form method="post">
-        <img src="img/search.jpg" alt="" />
+        <img class="img-form" src="img/search.jpg" alt="" />
 
         <div class="box_search">
           <div class="enter_text">
@@ -26,20 +26,6 @@
         </div>
 
       </form>
-
-        <script type="text/template" id="result">
-            <form>
-              <% for(var i = 0; i < data.length; i++) {%>
-            <div class="content-block-<%= i+1 %>">
-              <h2><%= data[i].question %></h2>
-
-              <label>
-                <input type="checkbox" id="<%= i+1 %>-variant" value="<%= data[i].answer1 %>">
-                <span><%= data[i].answer1 %></span>
-              </label>
-            </form>
-
-        </script>
 
     </div>
       <div id="overlay"></div>
