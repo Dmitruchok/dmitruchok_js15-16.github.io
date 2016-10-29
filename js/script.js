@@ -1,11 +1,12 @@
 
 $(function() {
 
-var $findInform = $('form .enter_text');
+var $findInform = $( 'form .enter_text' ),
+$inputText;
 
  $findInform.click(function () {
-  $findInform.removeClass('enter_text');
-  $findInform.addClass('on_outline');
+  $findInform.removeClass( 'enter_text' );
+  $findInform.addClass( 'on_outline' );
   $( '#overlay' ).css( {
     display: 'block' ,
     'z-index': 2,
@@ -23,36 +24,36 @@ $( '#overlay' ).click(function () {
 });
 
 function loadPicture() {
-  var $inputText = $( '#txt' ).val();
+  $inputText = $( '#txt' ).val();
   $.ajax({
     url: 'https://pixabay.com/api/?key=3630931-670473688b01fdf5a6341f310&q=yellow+flowers&image_type=photo&cat=&min_width=&min_height=&q='+$inputText+'&order=popular',
     mathod: 'POST',//Отправить Get чтобы получить данные
     dataType: 'jsonp',
-    success: function (data) {
-      console.log('Load information');
+    success: function ( data ) {
+      console.log( 'Load information' );
     },
     error: function () {
-      console.log('Appired problem!!');
+      console.log( 'Appired problem!!' );
     }
   }).done(function Callback( data ) {
-    $('.wrapper').append('<div class="result"></div>')
+    $( '.wrapper' ).append( '<div class="result"></div>' )
     $.each( data.hits, function ( i, hits ) {
       $( '<img/>' ).attr( 'src', hits.previewURL ).appendTo( '.result' );
-    })
+    });
   });
 };
 
 $( '#find' ).click(function (){
-    $('.result').remove('.result');
+    $( '.result' ).remove( '.result' );
     loadPicture();
   });
 
-$( '#txt' ).keypress(function enterPush(e) {
-  if(e.keyCode == 13) {
-    $('.result').remove('.result');
+$( '#txt' ).keypress(function enterPush( e ) {
+  if( e.keyCode === 13 ) {
+    $( '.result' ).remove( '.result' );
     event.preventDefault();
     loadPicture();
-  }
+  };
 });
 
 function Human() {
@@ -61,15 +62,15 @@ function Human() {
   this.sex = 'male';
   this.weight = 84;
   this.height = 174;
-}
+};
 
 function Worker() {
   this.placeWork = 'Radischeva 10/14';
   this.salary = '1300$';
   this.work = function () {
     console.log('Работать');
-  }
-}
+  };
+};
 
 Worker.prototype = new Human();
 var newWorker = new Worker(),
@@ -84,8 +85,8 @@ function Student() {
   this.scholarship = '150$';
   this.see = function () {
     console.log( 'Смотреть фильмы' );
-  }
-}
+  };
+};
 
 Student.prototype = new Human();
 var newStudent = new Student(),
