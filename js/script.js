@@ -22,14 +22,15 @@ $( '#overlay' ).click(function () {
  $( '#overlay' ).css( 'display', 'none' );
 });
 
-
-$( '#find' ).click(function loadPicture() {
+function loadPicture() {
+  $('.result').innerHTML ='';
   var $inputText = $( '#txt' ).val();
   $.ajax({
     url: 'https://pixabay.com/api/?key=3630931-670473688b01fdf5a6341f310&q=yellow+flowers&image_type=photo&cat=&min_width=&min_height=&q='+$inputText+'&order=popular',
     mathod: 'POST',//Отправить Get чтобы получить данные
     dataType: 'jsonp',
     success: function (data) {
+      $('.result').innerHTML ='';
       console.log('Load information');
     },
     error: function () {
@@ -37,14 +38,21 @@ $( '#find' ).click(function loadPicture() {
     }
   }).done(function Callback( data ) {
     $.each( data.hits, function ( i, hits ) {
-      $( '<img/>' ).attr( 'src', hits.previewURL ).appendTo( '.wrapper' );
+      $( '<img/>' ).attr( 'src', hits.previewURL ).appendTo( '.result' );
     })
   });
-});
-
-function Reset() {
-
 };
+
+$( '#find' ).click(function (){
+  loadPicture()
+  });
+
+$( '#txt' ).keypress(function enterPush(e) {
+  if(e.keyCode == 13) {
+    event.preventDefault();
+    loadPicture();
+  }
+});
 
 function Human() {
   this.name = 'Andrei';
