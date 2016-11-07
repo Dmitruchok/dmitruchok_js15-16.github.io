@@ -73,12 +73,10 @@ function Worker() {
 };
 
 Worker.prototype = new Human();
-var newWorker = new Worker(),
-workerLast = new Worker(),
-workerSay = new Worker();
+var newWorker = new Worker();
 console.log( 'newWorker.age - ', newWorker.age );
-console.log( 'workerLast.sex - ', workerLast.sex );
-workerSay.work();
+console.log( 'workerLast.sex - ', newWorker.sex );
+newWorker.work();
 
 function Student() {
   this.placeStudy = 'M. Pechersky';
@@ -89,13 +87,10 @@ function Student() {
 };
 
 Student.prototype = new Human();
-var newStudent = new Student(),
-studentLast = new Student(),
-studentScholarship = new Student(),
-studentSay = new Student();
+var newStudent = new Student();
 
 console.log( 'newStudent.height - ', newStudent.height );
-console.log( 'studentLast.name - ', studentLast.name );
-console.log( 'studentScholarship.scholarship  - ', studentScholarship.scholarship );
-studentSay.see();
+console.log( 'studentLast.name - ', newStudent.name );
+console.log( 'studentScholarship.scholarship  - ', newStudent.scholarship );
+newStudent.see();
 });
